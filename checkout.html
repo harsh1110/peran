@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout — PERAN</title>
+  <meta name="description" content="Prototype checkout for PERAN The Wedding House. No payment is taken.">
+  <meta name="theme-color" content="#6e1d1c">
+  <link rel="icon" href="assets/logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-bar">
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Menu</span>
+        <span class="burger" aria-hidden="true"></span>
+      </button>
+      <a class="wordmark" href="index.html">
+        <span class="wordmark-name">PERAN</span>
+        <span class="wordmark-sub">The Wedding House</span>
+      </a>
+      <nav id="site-nav" class="site-nav" data-nav aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a class="cart-link" href="cart.html" data-cart-link>Cart <span class="cart-count" data-cart-count>0</span></a>
+    </div>
+  </header>
+  <main id="main" class="wrap">
+    <div class="page-head">
+      <p class="eyebrow">Reserve</p>
+      <h1>Checkout</h1>
+      <p>Client-side only. The form checks what you typed, then shows a confirmation. No payment, no server.</p>
+    </div>
+    <p class="empty" data-checkout-empty hidden>Your cart is empty. <a href="shop.html">Shop the rail</a>.</p>
+    <div class="checkout-grid" data-checkout-panel>
+      <form data-checkout novalidate>
+        <div class="field">
+          <label for="full-name">Full name</label>
+          <input id="full-name" name="full-name" type="text" autocomplete="name" required aria-describedby="err-name">
+          <p class="error" id="err-name" data-error-for="full-name"></p>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="err-email">
+          <p class="error" id="err-email" data-error-for="email"></p>
+        </div>
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" required aria-describedby="err-phone">
+          <p class="error" id="err-phone" data-error-for="phone"></p>
+        </div>
+        <div class="field">
+          <label for="address">Address</label>
+          <input id="address" name="address" type="text" autocomplete="street-address" required aria-describedby="err-address">
+          <p class="error" id="err-address" data-error-for="address"></p>
+        </div>
+        <div class="field">
+          <label for="city">City</label>
+          <input id="city" name="city" type="text" autocomplete="address-level2" required aria-describedby="err-city">
+          <p class="error" id="err-city" data-error-for="city"></p>
+        </div>
+        <div class="field">
+          <label for="postal">PIN code</label>
+          <input id="postal" name="postal" type="text" inputmode="numeric" autocomplete="postal-code" required aria-describedby="err-postal">
+          <p class="error" id="err-postal" data-error-for="postal"></p>
+        </div>
+        <div class="field">
+          <label for="notes">Notes <span class="fine">(optional)</span></label>
+          <textarea id="notes" name="notes"></textarea>
+        </div>
+        <button class="btn btn-solid" type="submit">Place preview order</button>
+      </form>
+      <aside class="panel" aria-label="Order summary">
+        <h2>Order summary</h2>
+        <div data-summary></div>
+      </aside>
+    </div>
+    <div class="confirm" data-confirmation hidden tabindex="-1"></div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap"><p class="fine">Prototype checkout. No payment is taken.</p></div>
+  </footer>
+  <script src="js/catalog.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

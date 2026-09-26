@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Piece — PERAN</title>
+  <meta name="description" content="Product detail from PERAN The Wedding House.">
+  <meta name="theme-color" content="#6e1d1c">
+  <link rel="icon" href="assets/logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-bar">
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Menu</span>
+        <span class="burger" aria-hidden="true"></span>
+      </button>
+      <a class="wordmark" href="index.html">
+        <span class="wordmark-name">PERAN</span>
+        <span class="wordmark-sub">The Wedding House</span>
+      </a>
+      <nav id="site-nav" class="site-nav" data-nav aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a class="cart-link" href="cart.html" data-cart-link>Cart <span class="cart-count" data-cart-count>0</span></a>
+    </div>
+  </header>
+  <main id="main" class="wrap">
+    <p class="empty" data-missing hidden>This piece is not on the rail. <a href="shop.html">Return to the shop</a>.</p>
+    <article class="product" data-product>
+      <div>
+        <div class="gallery-main">
+          <img data-main alt="" width="1080" height="1440">
+        </div>
+        <div class="thumbs" data-thumbs></div>
+      </div>
+      <div>
+        <p class="eyebrow" data-category></p>
+        <h1 data-name></h1>
+        <p class="price" data-price></p>
+        <p data-description></p>
+        <fieldset class="sizes">
+          <legend>Size</legend>
+          <div data-sizes></div>
+        </fieldset>
+        <div class="buy-row">
+          <div class="qty-field">
+            <label for="qty">Quantity</label>
+            <div class="qty">
+              <button type="button" data-qty-dec aria-label="Decrease quantity">−</button>
+              <input id="qty" data-qty type="number" min="1" max="5" value="1" inputmode="numeric">
+              <button type="button" data-qty-inc aria-label="Increase quantity">+</button>
+            </div>
+          </div>
+          <button class="btn btn-solid" type="button" data-add>Add to cart</button>
+        </div>
+        <p class="status" data-status role="status"></p>
+        <p class="fine">Sizes run as a standard kurta block. Confirm the fit at F-8, Balaji Centre, or ask on 89809 06104. Indo-western pieces are also offered on rent at the atelier; this checkout does not book a rental.</p>
+      </div>
+    </article>
+    <section class="section" data-related-section>
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Also on the rail</p>
+          <h2>Further pieces</h2>
+        </div>
+      </div>
+      <div class="grid" data-related></div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <p>F-8, Balaji Centre, Memnagar, Ahmedabad 380052 · <a href="tel:+918980906104">89809 06104</a></p>
+      <p class="fine">Prototype shop. Photographs from the public feed of @peran.in.</p>
+    </div>
+  </footer>
+  <script src="js/catalog.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>
