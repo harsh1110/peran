@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — PERAN</title>
+  <meta name="description" content="Contact PERAN The Wedding House in Memnagar, Ahmedabad.">
+  <meta name="theme-color" content="#6e1d1c">
+  <link rel="icon" href="assets/logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-bar">
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Menu</span>
+        <span class="burger" aria-hidden="true"></span>
+      </button>
+      <a class="wordmark" href="index.html">
+        <span class="wordmark-name">PERAN</span>
+        <span class="wordmark-sub">The Wedding House</span>
+      </a>
+      <nav id="site-nav" class="site-nav" data-nav aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+      <a class="cart-link" href="cart.html" data-cart-link>Cart <span class="cart-count" data-cart-count>0</span></a>
+    </div>
+  </header>
+  <main id="main" class="wrap">
+    <div class="page-head">
+      <p class="eyebrow">Write</p>
+      <h1>Contact</h1>
+      <p>The form checks your note and then shows a confirmation on this page. It does not post anywhere.</p>
+    </div>
+    <div class="contact-grid">
+      <form data-contact novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="err-contact-name">
+          <p class="error" id="err-contact-name" data-error-for="name"></p>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="err-contact-email">
+          <p class="error" id="err-contact-email" data-error-for="email"></p>
+        </div>
+        <div class="field">
+          <label for="phone">Phone <span class="fine">(optional)</span></label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel">
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required aria-describedby="err-contact-message"></textarea>
+          <p class="error" id="err-contact-message" data-error-for="message"></p>
+        </div>
+        <button class="btn btn-solid" type="submit">Send note</button>
+      </form>
+      <aside class="panel">
+        <h2>The floor</h2>
+        <p>F-8, Balaji Centre<br>Opp. Gurukul Temple, Gurukul Road<br>Memnagar, Ahmedabad 380052</p>
+        <p><a href="tel:+918980906104">89809 06104</a></p>
+        <p><a href="https://www.instagram.com/peran.in/">Instagram @peran.in</a></p>
+        <p><a href="https://maps.app.goo.gl/yDE1dX3XQtR248si7">Open the map</a></p>
+      </aside>
+    </div>
+    <div class="confirm" data-contact-success hidden tabindex="-1"></div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap"><p class="fine">Prototype contact form. Nothing is sent to a server.</p></div>
+  </footer>
+  <script src="js/cart.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
